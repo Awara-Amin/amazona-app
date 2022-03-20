@@ -37,4 +37,127 @@ footer {
 
 make like him
 images
-half a star didnt work for me in minute 41
+error message doesnt appear
+props.history.push >> for redirecting
+when i delete all items inside the cart doesnt show me the message to go back for shopping
+
+
+min 1!:40 he added some into getIgnore > I did too but if you face any problem see here
+
+kaka example lo template leteral (which allow combining text and variavles )
+app.listen(port, () =>{
+    console.log(`server at http://localhost:${port}`);
+});
+
+
+checked
+
+
+import mongoose from 'mongoose';
+
+const orderSchema = new mongoose.Schema({
+    orderItems: [
+                    {
+                    name: {type: String, required: true},
+                    qty: {type: Number, required: true},
+                    image: {type: String, required: true},
+                    price: {type: Number, required: true},
+                    product: {
+                        type: mongoose.Schema.Types.ObjectId,
+                        ref: 'Product',
+                        required: true,
+                },
+                }, 
+                  ],
+    shippingAddress: {
+       fullName: {
+           type: String, 
+        //    required: true
+        },
+       address:{
+            type: String, 
+            required: true
+        },
+        city: {
+            type: String, 
+            // required: true
+        },
+        postalCode: {
+            type: String, 
+            required: true
+        },
+        country: {
+            type: String, 
+            required: true
+        },
+        },
+   paymentMethod: {
+       type: String,
+       required: true
+   },
+   paymentResult:{
+    id: String,
+    status: String,
+    update_time: String,
+    email_address: String,
+   },
+   
+   itemsPrice:{
+       type: Number,
+    //    required: true
+   },
+   shippingPrice:{
+    type: Number,
+    // required: true
+},
+    taxPrice:{
+    type: Number,
+    required: true
+},
+    totalPrice:{
+    type: Number,
+    required: true
+},
+    user:{type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
+    isPaid: { type: Boolean, default: false},
+    paidAt: { type: Date},
+    isDelivered: {type: Boolean, default: false},
+    deliveredAt: { type: Date},
+
+}, {
+    timestamps: true,
+}
+);
+
+const Order = mongoose.model('Order', orderSchema);
+export default Order;
+
+
+https://github.com/basir/amazona/pull/32/files
+
+
+
+
+
+<li>
+                                <div>
+                                Size 
+                                <select 
+                                    value={size} 
+                                    // onChange={(e) => setSize(e.target.value)}>
+                                    onChange={handleSizeChange}>
+                                            <option value="size">Size</option>
+                                            <option value="xl">XS</option>
+                                            <option value="s">S</option>
+                                            <option value="m">M</option>
+                                            <option value="l">L</option>
+                                            <option value="xl">XL</option>
+                                        
+                                </select>
+                                {/* <p>{product.size}</p> */}
+
+                                </div>
+                                
+                            </li>
+
+

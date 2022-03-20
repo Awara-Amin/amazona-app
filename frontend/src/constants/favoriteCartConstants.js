@@ -1,0 +1,18 @@
+// ********
+
+export const FAV_DETAILS_REQUEST = 'FAV_DETAILS_REQUEST';
+export const FAV_DETAILS_SUCCESS = 'FAV_DETAILS_SUCCESS';
+export const FAV_DETAILS_FAIL = 'FAV_DETAILS_FAIL';
+
+
+export const GET_TO_FAV = 'GET_TO_FAV';
+export const ADD_TO_FAV = 'ADD_TO_FAV';
+export const DELETE_FROM_FAV = 'DELETE_FROM_FAV';
+export const FAVORITECART_LOADING_TO_FAV = 'FAVORITECART_TO_FAV';
+
+
+
+
+
+
+
